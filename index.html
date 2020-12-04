@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>JS Hangman exercise</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <p>Find the word - Press a key coresponding to a letter</p>
+    <div class="game-container">
+        <svg class="figure-container" height="220" width="200">
+            <!--rod-->
+            <line x1="60" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="60" />
+            <line x1="60" y1="20" x2="60" y2="200" />
+            <line x1="20" y1="200" x2="100" y2="200"/>
+            <!--head-->
+            <circle cx="140" cy="80" r="15" class="body-lines"/>
+            <!--body-->
+            <line x1="140" y1="100" x2="140" y2="150" class="body-lines"/>
+            <!--arms-->
+            <line x1="140" y1="100" x2="120" y2="120" class="body-lines"/>
+            <line x1="140" y1="100" x2="160" y2="120" class="body-lines"/>
+            <!--legs-->
+            <line x1="140" y1="150" x2="120" y2="170" class="body-lines"/>
+            <line x1="140" y1="150" x2="160" y2="170" class="body-lines" />
+        </svg>
+
+        <div class="wrong-letters-container">
+            <div id="wrong-letters">
+                <p>Wrong letters till now:</p>
+                <div class="wrong-container"></div>
+            </div>
+        </div>
+
+        <div class="word" id="word">
+            
+        </div>
+    </div>
+    <!--Messages-->
+    <div class="message-container" id="message-container">
+        <div class="message">
+            <h2 id="final-message"></h2>
+            <h3 id="final-message-reveal-word"></h3>
+            <button id="play-again">Play again!</button>
+        </div>
+    </div>
+    <div class="notification-container" id="notification-container">
+        <p>Letter already pressed</p>
+    </div>
+</body>
+</html>

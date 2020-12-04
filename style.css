@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: rgb(113, 144, 151);
+    color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    overflow: hidden;
+}
+.game-container {
+    padding: 1rem;
+    position: relative;
+    margin: auto;
+    height: 450px;
+    width: 450px;
+}
+.wrong-letters-container{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+}
+.wrong-letters-container span{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.word {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.letter{
+    border-bottom: 2px solid orange;
+    display: inline-flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    height: 50px;
+    width: 20px;
+}
+.figure-container {
+    fill: transparent;
+    stroke: orange;
+    stroke-width: .4rem;
+    stroke-linecap: round;
+}
+
+
+.body-lines {
+    stroke: whitesmoke;
+    display: none;
+}
+.message-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.message {
+  background: #3c3d3d;
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+.message button {
+    cursor: pointer;
+    background-color: orange;
+    color: whitesmoke;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  
+  .message button:active {
+    transform: scale(0.98);
+  }
+  
+  .message button:focus {
+    outline: 0;
+  }
+  
+  .notification-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .notification-container p {
+    margin: 0;
+  }
+  
+  .notification-container.show {
+    transform: translateY(-50px);
+  }
+ 
+
